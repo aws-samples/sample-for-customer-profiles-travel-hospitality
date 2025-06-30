@@ -244,6 +244,10 @@ def generateHotelBookingData(loyaltyObj):
 def generateStayRevenueData(booking):
     revenue_items = []
     
+    # Only generate revenue items for completed bookings
+    if booking['Status'] != 'Completed':
+        return revenue_items
+    
     # Calculate tax per night
     total_tax = round(booking['TotalAmountAfterTax'] - booking['TotalAmountBeforeTax'], 2)
     tax_per_night = round(total_tax / booking['NumberOfNights'], 2)
@@ -301,35 +305,35 @@ def generateStayRevenueData(booking):
         {'type': 'Parking', 'description': 'Daily parking fee'},
         {'type': 'Incidentals', 'description': 'Room service and minibar'},
         {'type': 'Store Purchase', 'description': 'Hotel store purchases'},
-        {'type': 'Restaurant', 'description': 'Hotel restaurant charges'},
-        {'type': 'Laundry', 'description': 'Laundry and dry cleaning services'},
-        {'type': 'Spa', 'description': 'Spa treatments and services'}
-    ] if booking['Status'] == 'Completed' else []
+        {'type': 'Bar', 'description': 'Lobbty Bar'},
+        {'type': 'Restaurant', 'description': 'Dinning at Restaurant'},
+        {'type': 'Laundry', 'description': 'Laundry services'}
+    ]
         
-    # Randomly select 1-6 optional items if optional_types is not empty
-    if optional_types:
-        num_optional_items = random.randint(1, 6)
-        selected_optional = random.sample(optional_types, num_optional_items)
+    # Randomly select 1-4 optional items
+    num_optional_items = random.randint(1, 4)
+    selected_optional = random.sample(optional_types, num_optional_items)
         
-        for revenue_type in selected_optional:
-            revenue_item = {
-                "StayRevenueId": fake.uuid4(),
-                "ReservationId": booking['ReservationId'],
-                "GuestId": booking['LoyaltyId'],
-                "HotelCode": booking['HotelCode'],
-                "StartDate": booking['CheckInDate'],
-                "RevenueType": revenue_type['type'],
-                "RevenueDescription": revenue_type['description'],
-                "RevenueAmount": str(round(random.uniform(10.0, 100.0), 2)),
-                "CurrencyCode": booking['CurrencyCode'],
-                "CurrencyName": booking['CurrencyName'],
-                "CurrencySymbol": booking['CurrencySymbol'],
-                "ProcessedDate": booking['ProcessedDate'],
-                "RevenueStatus": "Posted" if booking['Status'] == 'Completed' else "Pending",
-                "CreatedDate": booking['CreatedDate'],
-                "CreatedBy": booking['CreatedBy'],
-                "UpdatedDate": booking['UpdatedDate'],
-                "UpdatedBy": booking['UpdatedBy']
-            }
-            revenue_items.append(revenue_item)    
+    for revenue_type in selected_optional:
+        revenue_item = {
+            "StayRevenueId": fake.uuid4(),
+            "ReservationId": booking['ReservationId'],
+            "GuestId": booking['LoyaltyId'],
+            "HotelCode": booking['HotelCode'],
+            "StartDate": booking['CheckInDate'],
+            "RevenueType": revenue_type['type'],
+            "RevenueDescription": revenue_type['description'],
+            "RevenueAmount": str(round(random.uniform(10.0, 100.0), 2)),
+            "CurrencyCode": booking['CurrencyCode'],
+            "CurrencyName": booking['CurrencyName'],
+            "CurrencySymbol": booking['CurrencySymbol'],
+            "ProcessedDate": booking['ProcessedDate'],
+            "RevenueStatus": "Posted",
+            "CreatedDate": booking['CreatedDate'],
+            "CreatedBy": booking['CreatedBy'],
+            "UpdatedDate": booking['UpdatedDate'],
+            "UpdatedBy": booking['UpdatedBy']
+        }
+        revenue_items.append(revenue_item)
+    
     return revenue_items
