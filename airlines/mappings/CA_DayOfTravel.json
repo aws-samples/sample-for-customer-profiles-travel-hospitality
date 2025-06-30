@@ -1,0 +1,21 @@
+{
+    "CalculatedAttributeName": "DayOfTravel",
+    "DisplayName": "DayOfTravel",
+    "Description": "Counts the number of bookings that a person has based on their departure date",
+    "Statistic": "COUNT",
+    "Conditions": {
+        "Range": {
+            "Unit": "DAYS",
+            "TimestampSource": "{Booking.DepartureDate}"
+        }
+    },
+    "AttributeDetails": {
+        "Attributes": [
+            {
+                "Name": "SegmentPNR"
+            }
+        ],
+        "Expression": "{Booking.SegmentPNR}"
+    },
+    "UseHistoricalData": true
+}

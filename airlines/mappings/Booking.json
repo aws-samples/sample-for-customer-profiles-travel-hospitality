@@ -1,0 +1,268 @@
+{
+   "ObjectTypeName":"Booking",
+   "Description":"Booking",
+   "AllowProfileCreation":true,
+   "SourceLastUpdatedTimestampFormat":"yyyy-MM-dd'T'HH:mm:ss'Z'",
+   "Fields":{
+            "LoyaltyId": {
+                "Source": "_source.LoyaltyId",
+                "Target": "_profile.Attributes.LoyaltyId"
+            },
+            "BookingLoyaltyId": {
+                "Source": "_source.LoyaltyId",
+                "Target": "_airBooking.Loyalty.MembershipId"
+            },
+            "AccountNumberLoyaltyId": {
+                "Source": "_source.LoyaltyId",
+                "Target": "_profile.AccountNumber"
+            },
+            "BookingId": {
+                "Source": "_source.BookingId",
+                "Target": "_airBooking.Attributes.BookingId"
+            },
+            "PNR": {
+                "Source": "_source.PNR",
+                "Target": "_airBooking.Attributes.PNR"
+            },
+            "SegmentPNR": {
+                "Source": "_source.PNR",
+                "Target": "_airSegment.BookingRef"
+            },
+            "FirstName": {
+                "Source": "_source.FirstName",
+                "Target": "_profile.FirstName"
+            },
+            "MiddleName": {
+                "Source": "_source.MiddleName",
+                "Target": "_profile.MiddleName"
+            },
+            "LastName": {
+                "Source": "_source.LastName",
+                "Target": "_profile.LastName"
+            },
+            "Email": {
+                "Source": "_source.Email"
+            },
+            "PhoneNumber": {
+                "Source": "_source.Phone"
+            },
+            "BirthDate": {
+                "Source": "_source.BirthDate"
+            },
+            "CreatedOn": {
+                "Source": "_source.CreatedOn",
+                "Target": "_airBooking.CreatedDate"
+            },
+            "SegmentCreatedOn": {
+                "Source": "_source.CreatedOn",
+                "Target": "_airSegment.CreatedDate"
+            },
+            "CreationChannelId": {
+                "Source": "_source.CreationChannelId",
+                "Target": "_airBooking.Channel.Method"
+            },
+            "LastUpdated": {
+                "Source": "_source.LastUpdated",
+                "Target": "_airBooking.UpdatedDate"
+            },
+            "SegmentLastUpdated": {
+                "Source": "_source.LastUpdated",
+                "Target": "_airSegment.UpdatedDate"
+            },
+            "LastUpdatedBy": {
+                "Source": "_source.LastUpdatedBy",
+                "Target": "_airBooking.UpdatedBy"
+            },
+            "SegmentLastUpdatedBy": {
+                "Source": "_source.LastUpdatedBy",
+                "Target": "_airSegment.UpdatedBy"
+            },
+            "SegmentId": {
+                "Source": "_source.SegmentId",
+                "Target": "_airSegment.Attributes.SegmentId"
+            },
+            "From": {
+                "Source": "_source.From",
+                "Target": "_airSegment.Origin"
+            },
+            "To": {
+                "Source": "_source.To",
+                "Target": "_airSegment.Dest"
+            },
+            "FlightNumber": {
+                "Source": "_source.FlightNumber",
+                "Target": "_airSegment.FlightNumber"
+            },
+            "DepartureDate": {
+                "Source": "_source.DepartureDate",
+                "Target": "_airSegment.Departure.Date"
+            },
+            "DepartureTime": {
+                "Source": "_source.DepartureTime",
+                "Target": "_airSegment.Departure.Time"
+            },
+            "ArrivalDate": {
+                "Source": "_source.ArrivalDate",
+                "Target": "_airSegment.Arrival.Date"
+            },
+            "ArrivalTime": {
+                "Source": "_source.ArrivalTime",
+                "Target": "_airSegment.Arrival.Time"
+            },
+            "SchDepartureTime": {
+                "Source": "_source.SchDepartureTime",
+                "Target": "_airSegment.Departure.ScheduledTime"
+            },
+            "SchArrivalTime": {
+                "Source": "_source.SchArrivalTime",
+                "Target": "_airSegment.Arrival.ScheduledTime"
+            },
+            "Status": {
+                "Source": "_source.Status",
+                "Target": "_airSegment.Status"
+            },
+            "JobTitle": {
+                "Source": "_source.JobTitle"
+            },
+            "Company": {
+                "Source": "_source.JobTitle",
+                "Target": "_profile.BusinessName"
+            },
+            "IsArmed": {
+                "Source": "_source.IsArmed",
+                "Target": "_airSegment.IsArmed"
+            },
+            "TravellerId": {
+                "Source": "_source.TravellerId",
+                "Target": "_airBooking.TravellerId"
+            },
+            "IsIntrntl": {
+                "Source": "_source.IsIntrntl",
+                "Target": "_airSegment.IsInternational"
+            },
+            "IsDowngraded": {
+                "Source": "_source.IsDowngraded",
+                "Target": "_airSegment.Downgraded"
+            },
+            "IsUpgraded": {
+                "Source": "_source.IsUpgraded",
+                "Target": "_airSegment.Upgraded"
+            },
+            "HasPaidPremimumAccess": {
+                "Source": "_source.HasPaidPremimumAccess",
+                "Target": "_airSegment.PremiumAccess"
+            },
+            "BagCheckinCount": {
+                "Source": "_source.BagCheckinCount",
+                "Target": "_airSegment.BaggageQuantity"
+            },
+            "Price": {
+                "Source": "_source.Price",
+                "Target": "_airBooking.Price.TotalPrice"
+            },
+            "TravellerPrice": {
+                "Source": "_source.TravellerPrice",
+                "Target": "_airBooking.Price.TravellerPrice"
+            },
+            "BkdClsOfSrv": {
+                "Source": "_source.BkdClsOfSrv",
+                "Target": "_airSegment.BookedClassOfService"
+            },
+            "CurrClsOfSrv": {
+                "Source": "_source.BkdClsOfSrv",
+                "Target": "_airSegment.CurrentClassOfService"
+            },
+            "OrigCntryCd": {
+                "Source": "_source.OrigCntryCd",
+                "Target": "_airSegment.OriginCountryCode"
+            },
+            "DestCntryCd": {
+                "Source": "_source.DestCntryCd",
+                "Target": "_airSegment.DestCountryCode"
+            },
+            "CarrCd": {
+                "Source": "_source.CarrCd",
+                "Target": "_airSegment.Carrier"
+            },
+            "BagOverweight": {
+                "Source": "_source.BagOverweight",
+                "Target": "_airSegment.Baggage.IsHeavy"
+            },
+            "IsDiplomat": {
+                "Source": "_source.IsDiplomat",
+                "Target": "_airBooking.Diplomat"
+            },
+            "IsDisabled": {
+                "Source": "_source.IsDisabled",
+                "Target": "_airBooking.Disabled"
+            },
+            "IsPaxOxygen": {
+                "Source": "_source.IsPaxOxygen",
+                "Target": "_airBooking.Oxygen"
+            },
+            "AgencyIATACd": {
+                "Source": "_source.AgencyIATACd",
+                "Target": "_airBooking.TravelCorpNumber"
+            },
+            "IsETkt": {
+                "Source": "_source.IsETkt",
+                "Target": "_airSegment.IsEticket"
+            },
+            "SeatNbr": {
+                "Source": "_source.SeatNbr",
+                "Target": "_airSegment.Seat.SeatNumber"
+            },
+            "FlightMiles": {
+                "Source": "_source.FlightMiles",
+                "Target": "_airSegment.Distance"
+            },
+           "MilesEarnAmount": {
+                "Source": "_source.MilesEarnAmount",
+                "Target": "_airSegment.MilesToEarn"
+            },
+           "FlightDuration": {
+               "Source": "_source.FlightDuration",
+                "Target": "_airSegment.Duration"
+           }
+        },
+   "Keys":{
+            "LoyaltyId": [
+                {
+                    "FieldNames": [
+                        "LoyaltyId"
+                    ],
+                    "StandardIdentifiers": [
+                        "PROFILE"
+                    ]
+                }
+            ],            
+            "ObjectId": [
+                {
+                    "FieldNames": [
+                        "BookingId"
+                    ],
+                    "StandardIdentifiers": [
+                        "UNIQUE",
+                        "AIR_BOOKING"
+                    ]
+                }
+            ],
+            "SegmentId": [
+                {
+                    "FieldNames": [
+                        "SegmentId"
+                    ],
+                    "StandardIdentifiers": [
+                        "AIR_SEGMENT"
+                    ]
+                }
+            ],
+            "PNR": [
+                {
+                    "FieldNames": [
+                        "PNR"
+                    ]
+                }
+            ]
+        }
+}

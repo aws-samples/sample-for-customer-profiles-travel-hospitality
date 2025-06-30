@@ -1,0 +1,103 @@
+{
+   "ObjectTypeName":"HotelStayRevenue",
+   "Description":"Hotel Stay Revenue Object Type Mapping",
+   "AllowProfileCreation":true,
+   "SourceLastUpdatedTimestampFormat":"yyyy-MM-dd'T'HH:mm:ss'Z'",
+   "Fields":{
+            "StayRevenueId": {
+                "Source": "_source.StayRevenueId",
+                "Target": "_hotelStayRevenue.Attributes.StayRevenueId"
+            },
+            "ReservationId": {
+                "Source": "_source.ReservationId",
+                "Target": "_hotelStayRevenue.ReservationId"
+            },
+            "GuestId": {
+                "Source": "_source.GuestId",
+                "Target": "_hotelStayRevenue.GuestId"
+            },
+            "ProfileGuestId": {
+                "Source": "_source.GuestId",
+                "Target": "_profile.AccountNumber"
+            },
+            "HotelCode": {
+                "Source": "_source.HotelCode",
+                "Target": "_hotelStayRevenue.HotelCode"
+            },
+            "StartDate": {
+                "Source": "_source.StartDate",
+                "Target": "_hotelStayRevenue.StartDate"
+            },
+            "RevenueType": {
+                "Source": "_source.RevenueType",
+                "Target": "_hotelStayRevenue.Type"
+            },
+            "RevenueDescription": {
+                "Source": "_source.RevenueDescription",
+                "Target": "_hotelStayRevenue.Description"
+            },
+            "RevenueAmount": {
+                "Source": "_source.RevenueAmount",
+                "Target": "_hotelStayRevenue.Amount"
+            },
+            "CurrencyCode": {
+                "Source": "_source.CurrencyCode",
+                "Target": "_hotelStayRevenue.CurrencyCode"
+            },
+            "CurrencyName": {
+                "Source": "_source.CurrencyName",
+                "Target": "_hotelStayRevenue.CurrencyName"
+            },
+            "CurrencySymbol": {
+                "Source": "_source.CurrencySymbol",
+                "Target": "_hotelStayRevenue.CurrencySymbol"
+            },
+            "ProcessedDate": {
+                "Source": "_source.ProcessedDate",
+                "Target": "_hotelStayRevenue.ProcessedDate"
+            },
+            "RevenueStatus": {
+                "Source": "_source.RevenueStatus",
+                "Target": "_hotelStayRevenue.Status"
+            },
+            "CreatedDate": {
+                "Source": "_source.CreatedDate",
+                "Target": "_hotelStayRevenue.CreatedOn"
+            },
+            "CreatedBy": {
+                "Source": "_source.CreatedBy",
+                "Target": "_hotelStayRevenue.CreatedBy"
+            },
+            "UpdatedDate": {
+                "Source": "_source.UpdatedDate",
+                "Target": "_hotelStayRevenue.LastUpdatedOn"
+            },
+            "UpdatedBy": {
+                "Source": "_source.UpdatedBy",
+                "Target": "_hotelStayRevenue.LastUpdatedBy"
+            }
+        },
+   "Keys":{
+            "LoyaltyId": [
+                {
+                    "FieldNames": [
+                        "GuestId"
+                    ],
+                    "StandardIdentifiers": [
+                        "PROFILE"
+                    ]
+                }
+            ],            
+            "StayRevenueId": [
+                {
+                    "FieldNames": [
+                        "StayRevenueId"
+                    ],
+                    "StandardIdentifiers": [
+                        "UNIQUE",
+                        "HOTEL_STAY_REVENUE"
+                    ]
+                }
+            ]
+        }
+}

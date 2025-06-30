@@ -1,0 +1,238 @@
+{
+   "ObjectTypeName":"HotelPreferences",
+   "Description":"Creates the Loyalty membership program object type maping for Hotels Preferences",
+   "AllowProfileCreation":false,
+   "SourceLastUpdatedTimestampFormat":"yyyy-MM-dd'T'HH:mm:ss'Z'",
+   "Fields":{
+            "LoyaltyId": {
+                "Source": "_source.LoyaltyId"
+            },
+            "PreferenceId": {
+                "Source": "_source.PreferenceId",
+                "Target": "_hotelPreference.Attributes.HotelPreferenceId"
+            },
+            "PreferenceName": {
+                "Source": "_source.PreferenceName",
+                "Target": "_hotelPreference.Name"
+            },
+            "SmokingPreference": {
+                "Source": "_source.SmokingPreference",
+                "Target": "_hotelPreference.Smoking"
+            },
+            "CleaningTime": {
+                "Source": "_source.CleaningTime",
+                "Target": "_hotelPreference.CleaningTime"
+            },
+            "CheckInType": {
+                "Source": "_source.CheckInType",
+                "Target": "_hotelPreference.CheckInType"
+            },
+            "CheckOutType": {
+                "Source": "_source.CheckOutType",
+                "Target": "_hotelPreference.CheckOutType"
+            },
+            "RoomFloor": {
+                "Source": "_source.RoomFloor",
+                "Target": "_hotelPreference.Location.PreferredFloor"
+            },
+            "ElevatorProximity": {
+                "Source": "_source.ElevatorProximity",
+                "Target": "_hotelPreference.Location.ElevatorProximity"
+            },
+            "QuietZone": {
+                "Source": "_source.QuietZone",
+                "Target": "_hotelPreference.Location.QuietZone"
+            },
+            "RoomView": {
+                "Source": "_source.RoomView",
+                "Target": "_hotelPreference.Location.View"
+            },
+            "RoomType": {
+                "Source": "_source.RoomType",
+                "Target": "_hotelPreference.Location.RoomType"
+            },
+            "BedType": {
+                "Source": "_source.BedType",
+                "Target": "_hotelPreference.Bedding.BedType"
+            },
+            "MattressType": {
+                "Source": "_source.MattressType",
+                "Target": "_hotelPreference.Bedding.MattressType"
+            },
+            "PillowType": {
+                "Source": "_source.PillowType",
+                "Target": "_hotelPreference.Bedding.PillowType"
+            },
+            "NumberOfPillows": {
+                "Source": "_source.NumberOfPillows",
+                "Target": "_hotelPreference.Bedding.NumberOfPillows"
+            },
+            "Language": {
+                "Source": "_source.Language",
+                "Target": "_hotelPreference.Language.PhoneLanguage"
+            },
+            "EmailLanguage": {
+                "Source": "_source.EmailLanguage",
+                "Target": "_hotelPreference.Language.EmailLanguage"
+            },
+            "CarRentalVendor": {
+                "Source": "_source.CarRentalVendor",
+                "Target": "_hotelPreference.CarRental.Vendor"
+            },
+            "VehicleType": {
+                "Source": "_source.VehicleType",
+                "Target": "_hotelPreference.CarRental.VehicleType"
+            },
+            "MealType": {
+                "Source": "_source.MealType",
+                "Target": "_hotelPreference.Dining.MealType"
+            },
+            "FavoriteCuisine": {
+                "Source": "_source.FavoriteCuisine",
+                "Target": "_hotelPreference.Dining.FavoriteCuisine"
+            },
+            "Beverage": {
+                "Source": "_source.Beverage",
+                "Target": "_hotelPreference.Dining.Beverage"
+            },
+            "DietaryRestriction": {
+                "Source": "_source.DietaryRestriction",
+                "Target": "_hotelPreference.Dining.DietaryRestriction"
+            },
+            "AllergyInfo": {
+                "Source": "_source.AllergyInfo",
+                "Target": "_hotelPreference.Dining.AllergyInfo"
+            },
+            "LoyaltyProgramName": {
+                "Source": "_source.LoyaltyProgramName",
+                "Target": "_hotelPreference.Loyalty.LoyaltyName"
+            },
+            "LoyaltyMembershipId": {
+                "Source": "_source.LoyaltyMembershipId",
+                "Target": "_hotelPreference.Loyalty.MembershipId"
+            },
+            "Wheelchair": {
+                "Source": "_source.Wheelchair",
+                "Target": "_hotelPreference.Accessibility.Wheelchair"
+            },
+            "DisabilityType": {
+                "Source": "_source.DisabilityType",
+                "Target": "_hotelPreference.Accessibility.DisabilityType"
+            },
+            "SupportAnimal": {
+                "Source": "_source.SupportAnimal",
+                "Target": "_hotelPreference.Accessibility.SupportAnimal"
+            },
+            "BathroomAccessibility": {
+                "Source": "_source.BathroomAccessibility",
+                "Target": "_hotelPreference.Accessibility.Bathroom"
+            },
+            "MarketingOptIn": {
+                "Source": "_source.MarketingOptIn",
+                "Target": "_hotelPreference.Marketing.OptIn"
+            },
+            "MarketingChannelType": {
+                "Source": "_source.MarketingChannelType",
+                "Target": "_hotelPreference.Marketing.ChannelType"
+            },
+            "MarketingFrequency": {
+                "Source": "_source.MarketingFrequency",
+                "Target": "_hotelPreference.Marketing.Frequency"
+            },
+            "ContactDetailEmail": {
+                "Source": "_source.ContactDetailEmail",
+                "Target": "_hotelPreference.ContactDetail.EmailAddress"
+            },
+            "ContactDetailPhone": {
+                "Source": "_source.ContactDetailPhone",
+                "Target": "_hotelPreference.ContactDetail.PhoneNumber"
+            },
+            "ContactDetailCommunicationMethod": {
+                "Source": "_source.ContactDetailCommunicationMethod",
+                "Target": "_hotelPreference.ContactDetailCommunication.Method"
+            },
+            "PaymentMethodName": {
+                "Source": "_source.PaymentMethodName",
+                "Target": "_hotelPreference.PaymentForm.Name"
+            },
+            "PaymentMethodType": {
+                "Source": "_source.PaymentMethodType",
+                "Target": "_hotelPreference.PaymentForm.Type"
+            },
+            "PetType": {
+                "Source": "_source.PetType",
+                "Target": "_hotelPreference.PetInfo.Type"
+            },
+            "SpecialRequestType": {
+                "Source": "_source.SpecialRequestType",
+                "Target": "_hotelPreference.SpecialRequest.Type"
+            },
+            "SpecialRequestName": {
+                "Source": "_source.SpecialRequestName",
+                "Target": "_hotelPreference.SpecialRequest.Name"
+            },
+            "InterestName": {
+                "Source": "_source.InterestName",
+                "Target": "_hotelPreference.Interest.NameOfInterest"
+            },
+            "ReferenceId": {
+                "Source": "_source.ReferenceId",
+                "Target": "_hotelPreference.ReferenceId"
+            },
+            "ReferenceType": {
+                "Source": "_source.ReferenceType",
+                "Target": "_hotelPreference.ReferenceType"
+            },
+            "Status": {
+                "Source": "_source.Status",
+                "Target": "_hotelPreference.Status"
+            },
+            "StartDate": {
+                "Source": "_source.StartDate",
+                "Target": "_hotelPreference.StartDate"
+            },
+            "EndDate": {
+                "Source": "_source.EndDate",
+                "Target": "_hotelPreference.EndDate"
+            },
+            "CreatedDate": {
+                "Source": "_source.CreatedDate",
+                "Target": "_hotelPreference.CreatedDate"
+            },
+            "CreatedBy": {
+                "Source": "_source.CreatedBy",
+                "Target": "_hotelPreference.CreatedBy"
+            },
+            "UpdatedDate": {
+                "Source": "_source.UpdatedDate",
+                "Target": "_hotelPreference.UpdatedDate"
+            },
+            "UpdatedBy": {
+                "Source": "_source.UpdatedBy",
+                "Target": "_hotelPreference.UpdatedBy"
+            }
+        },
+   "Keys":{
+            "LoyaltyId": [
+                {
+                    "FieldNames": [
+                        "LoyaltyId"
+                    ],
+                    "StandardIdentifiers": [
+                        "PROFILE"
+                    ]
+                }
+            ],
+            "PreferenceId": [
+                {
+                    "FieldNames": [
+                        "PreferenceId"
+                    ],
+                    "StandardIdentifiers": [
+                        "UNIQUE",
+                        "HOTEL_PREFERENCE"
+                    ]
+                }
+            ]
+        }
+}

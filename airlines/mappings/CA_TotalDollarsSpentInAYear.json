@@ -1,0 +1,25 @@
+{
+    "CalculatedAttributeName": "TotalDollarsSpentInAYear",
+    "DisplayName": "TotalDollarsSpentInAYear",
+    "Description": "Sum total of dollars spent in a year",
+    "Statistic": "SUM",
+    "Conditions": {
+        "Range": {
+            "Unit": "DAYS",
+            "ValueRange": {
+                "Start": 366,
+                "End": 0
+            },
+            "TimestampSource": "{_airSegment.Departure.Date}"
+        }
+    },
+    "AttributeDetails": {
+        "Attributes": [
+            {
+                "Name": "Seat.Price"
+            }
+        ],
+        "Expression": "{_airSegment.Seat.Price}"
+    },
+    "UseHistoricalData": true
+}

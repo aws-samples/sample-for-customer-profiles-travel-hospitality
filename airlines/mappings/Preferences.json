@@ -1,0 +1,132 @@
+{
+   "ObjectTypeName":"Preferences",
+   "Description":"Preferences",
+   "AllowProfileCreation":false,
+   "SourceLastUpdatedTimestampFormat":"yyyy-MM-dd'T'HH:mm:ss'Z'",
+   "Fields":{
+   			"LoyaltyId": {
+                "Source": "_source.LoyaltyId"
+            },
+            "PreferenceId": {
+                "Source": "_source.PreferenceId",
+                "Target": "_airPreference.Attributes.AirPreferenceId"
+            },
+            "SeatDescription": {
+                "Source": "_source.SeatDescription",
+                "Target": "_airPreference.Seat.Location"
+            },
+            "SeatCode": {
+                "Source": "_source.SeatCode"
+            },
+            "CabinDescription": {
+                "Source": "_source.CabinDescription",
+                "Target": "_airPreference.Seat.ClassOfService"
+            },
+            "CabinCode": {
+                "Source": "_source.CabinCode"
+            },
+            "SearchPreference": {
+                "Source": "_source.SearchPreference"
+            },
+            "SearchPreferenceDescription": {
+                "Source": "_source.SearchPreferenceDescription"
+            },
+            "Language": {
+                "Source": "_source.Language",
+                "Target": "_airPreference.Language.InPersonLanguage"
+            },
+            "DateFormat": {
+                "Source": "_source.DateFormat"
+            },
+            "TimeFormat": {
+                "Source": "_source.TimeFormat"
+            },
+            "MealType": {
+                "Source": "_source.MealType",
+                "Target": "_airPreference.Dining.MealType"
+            },
+            "DietaryRestriction": {
+                "Source": "_source.DietaryRestriction",
+                "Target": "_airPreference.Dining.DietaryRestriction"
+            },
+            "FareTypeDescription": {
+                "Source": "_source.FareTypeDescription",
+                "Target": "_airPreference.Seat.ClassOfService"
+            },
+            "AirportCode": {
+                "Source": "_source.AirportCode",
+                "Target": "_airPreference.HomeAirport"
+            },
+            "ReferenceId": {
+                "Source": "_source.ReferenceId",
+                "Target": "_airPreference.ReferenceId"
+            },
+            "ReferenceType": {
+                "Source": "_source.type",
+                "Target": "_airPreference.ReferenceType"
+            },
+            "LastUpdated": {
+                "Source": "_source.LastUpdated",
+                "Target": "_airPreference.UpdatedDate"
+            },
+            "CreatedDate": {
+                "Source": "_source.CreatedDate",
+                "Target": "_airPreference.CreatedDate"
+            },
+            "Wheelchair": {
+                "Source": "_source.Wheelchair",
+                "Target": "_airPreference.Accessibility.Wheelchair"
+            },
+            "DisabilityType": {
+                "Source": "_source.DisabilityType",
+                "Target": "_airPreference.Accessibility.DisabilityType"
+            },
+            "SupportAnimal": {
+                "Source": "_source.SupportAnimal",
+                "Target": "_airPreference.Accessibility.SupportAnimal"
+            },
+            "MarketingOptIn": {
+                "Source": "_source.MarketingOptIn",
+                "Target": "_airPreference.Marketing.OptIn"
+            },
+            "MarketingChannelType": {
+                "Source": "_source.MarketingChannelType",
+                "Target": "_airPreference.Marketing.ChannelType"
+            },
+            "ContactDetailCommunicationMethod": {
+                "Source": "_source.ContactDetailCommunicationMethod",
+                "Target": "_airPreference.ContactDetailCommunication.Method"
+            },
+            "ContactDetailEmail": {
+                "Source": "_source.ContactDetailEmail",
+                "Target": "_airPreference.ContactDetail.EmailAddress"
+            },
+            "TravelType": {
+                "Source": "_source.TravelType",
+                "Target": "_airPreference.TravelType"
+            }
+        },
+   "Keys":{
+            "LoyaltyId": [
+                {
+                    "FieldNames": [
+                        "LoyaltyId"
+                    ],
+                    "StandardIdentifiers": [
+                        "PROFILE"
+                    ]
+                }
+            ],
+            "PreferenceId": [
+                {
+                    "FieldNames": [
+                        "PreferenceId"
+                    ],
+                    "StandardIdentifiers": [
+                        "UNIQUE",
+                        "AIR_PREFERENCE"
+                    ]
+                }
+            ]
+        }
+}

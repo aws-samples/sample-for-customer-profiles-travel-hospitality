@@ -1,0 +1,302 @@
+{
+   "ObjectTypeName":"HotelReservation",
+   "Description":"Hotel Reservation Object Type Mapping",
+   "AllowProfileCreation":true,
+   "SourceLastUpdatedTimestampFormat":"yyyy-MM-dd'T'HH:mm:ss'Z'",
+   "Fields":{
+            "LoyaltyId": {
+                "Source": "_source.LoyaltyId",
+                "Target": "_profile.Attributes.LoyaltyId"
+            },
+            "ReservationLoyaltyId": {
+                "Source": "_source.LoyaltyId",
+                "Target": "_hotelReservation.Loyalty.MembershipId"
+            },
+            "AccountNumberLoyaltyId": {
+                "Source": "_source.LoyaltyId",
+                "Target": "_profile.AccountNumber"
+            },
+            "ReservationId": {
+                "Source": "_source.ReservationId",
+                "Target": "_hotelReservation.Attributes.ReservationId"
+            },
+            "ConfirmationNumber": {
+                "Source": "_source.ConfirmationNumber",
+                "Target": "_hotelReservation.ConfirmationNumber"
+            },
+            "FirstName": {
+                "Source": "_source.FirstName",
+                "Target": "_profile.FirstName"
+            },
+            "MiddleName": {
+                "Source": "_source.MiddleName",
+                "Target": "_profile.MiddleName"
+            },
+            "LastName": {
+                "Source": "_source.LastName",
+                "Target": "_profile.LastName"
+            },
+            "Email": {
+                "Source": "_source.Email",
+                "Target": "_hotelReservation.EmailAddress"
+            },
+            "PhoneNumber": {
+                "Source": "_source.PhoneNumber",
+                "Target": "_hotelReservation.PhoneNumber"
+            },
+            "Status": {
+                "Source": "_source.Status",
+                "Target": "_hotelReservation.Status"
+            },
+            "TripType": {
+                "Source": "_source.TripType",
+                "Target": "_hotelReservation.TripType"
+            },
+            "BrandCode": {
+                "Source": "_source.BrandCode",
+                "Target": "_hotelReservation.BrandCode"
+            },
+            "HotelCode": {
+                "Source": "_source.HotelCode",
+                "Target": "_hotelReservation.HotelCode"
+            },
+            "GroupId": {
+                "Source": "_source.GroupId",
+                "Target": "_hotelReservation.GroupId"
+            },
+            "TransactionId": {
+                "Source": "_source.TransactionId",
+                "Target": "_hotelReservation.TransactionId"
+            },
+            "CreatedDate": {
+                "Source": "_source.CreatedDate",
+                "Target": "_hotelReservation.CreatedDate"
+            },
+            "CreatedBy": {
+                "Source": "_source.CreatedBy",
+                "Target": "_hotelReservation.CreatedBy"
+            },
+            "UpdatedDate": {
+                "Source": "_source.UpdatedDate",
+                "Target": "_hotelReservation.UpdatedDate"
+            },
+            "UpdatedBy": {
+                "Source": "_source.UpdatedBy",
+                "Target": "_hotelReservation.UpdatedBy"
+            },
+            "ProcessedDate": {
+                "Source": "_source.ProcessedDate",
+                "Target": "_hotelReservation.ProcessedDate"
+            },
+            "CheckInDate": {
+                "Source": "_source.CheckInDate",
+                "Target": "_hotelReservation.CheckIn.Date"
+            },
+            "CheckOutDate": {
+                "Source": "_source.CheckOutDate",
+                "Target": "_hotelReservation.Checkout.Date"
+            },
+            "EarlyCheckIn": {
+                "Source": "_source.EarlyCheckIn",
+                "Target": "_hotelReservation.CheckIn.Early"
+            },
+            "LateCheckIn": {
+                "Source": "_source.LateCheckIn",
+                "Target": "_hotelReservation.CheckIn.Late"
+            },
+            "EarlyCheckOut": {
+                "Source": "_source.EarlyCheckOut",
+                "Target": "_hotelReservation.Checkout.Early"
+            },
+            "LateCheckOut": {
+                "Source": "_source.LateCheckOut",
+                "Target": "_hotelReservation.Checkout.Late"
+            },
+            "DigitalKey": {
+                "Source": "_source.DigitalKey",
+                "Target": "_hotelReservation.CheckIn.DigitalKey"
+            },
+            "RoomKeys": {
+                "Source": "_source.RoomKeys",
+                "Target": "_hotelReservation.CheckIn.RoomKeys"
+            },
+            "RoomTypeCode": {
+                "Source": "_source.RoomTypeCode",
+                "Target": "_hotelReservation.Room.TypeCode"
+            },
+            "RoomTypeName": {
+                "Source": "_source.RoomTypeName",
+                "Target": "_hotelReservation.Room.TypeName"
+            },
+            "RoomNumber": {
+                "Source": "_source.RoomNumber",
+                "Target": "_hotelReservation.Room.Number"
+            },
+            "RoomCapacity": {
+                "Source": "_source.RoomCapacity",
+                "Target": "_hotelReservation.Room.Capacity"
+            },
+            "SmokingAllowed": {
+                "Source": "_source.SmokingAllowed",
+                "Target": "_hotelReservation.Room.SmokingAllowed"
+            },
+            "AccessibilityType": {
+                "Source": "_source.AccessibilityType",
+                "Target": "_hotelReservation.Room.AccessibilityType"
+            },
+            "NumberOfNights": {
+                "Source": "_source.NumberOfNights",
+                "Target": "_hotelReservation.NumberOfNights"
+            },
+            "NumberOfGuests": {
+                "Source": "_source.NumberOfGuests",
+                "Target": "_hotelReservation.NumberOfGuests"
+            },
+            "AdultGuests": {
+                "Source": "_source.AdultGuests",
+                "Target": "_hotelReservation.Guests.Adults"
+            },
+            "ChildGuests": {
+                "Source": "_source.ChildGuests",
+                "Target": "_hotelReservation.Guests.Children"
+            },
+            "AmountPerNight": {
+                "Source": "_source.AmountPerNight",
+                "Target": "_hotelReservation.AmountPerNight"
+            },
+            "TotalAmountBeforeTax": {
+                "Source": "_source.TotalAmountBeforeTax",
+                "Target": "_hotelReservation.TotalAmountBeforeTax"
+            },
+            "TotalAmountAfterTax": {
+                "Source": "_source.TotalAmountAfterTax",
+                "Target": "_hotelReservation.TotalAmountAfterTax"
+            },
+            "CurrencyCode": {
+                "Source": "_source.CurrencyCode",
+                "Target": "_hotelReservation.Currency.Code"
+            },
+            "CurrencyName": {
+                "Source": "_source.CurrencyName",
+                "Target": "_hotelReservation.Currency.Name"
+            },
+            "CurrencySymbol": {
+                "Source": "_source.CurrencySymbol",
+                "Target": "_hotelReservation.Currency.Symbol"
+            },
+            "PaymentType": {
+                "Source": "_source.PaymentType",
+                "Target": "_hotelReservation.Payment.Type"
+            },
+            "CreditCardType": {
+                "Source": "_source.CreditCardType",
+                "Target": "_hotelReservation.Payment.CreditCardType"
+            },
+            "CreditCardToken": {
+                "Source": "_source.CreditCardToken",
+                "Target": "_hotelReservation.Payment.CreditCardToken"
+            },
+            "NameOnCreditCard": {
+                "Source": "_source.NameOnCreditCard",
+                "Target": "_hotelReservation.Payment.NameOnCreditCard"
+            },
+            "DiscountCode": {
+                "Source": "_source.DiscountCode",
+                "Target": "_hotelReservation.Payment.DiscountCode"
+            },
+            "DiscountPercent": {
+                "Source": "_source.DiscountPercent",
+                "Target": "_hotelReservation.Payment.DiscountPercent"
+            },
+            "LoyaltyProgramName": {
+                "Source": "_source.LoyaltyProgramName",
+                "Target": "_hotelReservation.Loyalty.ProgramName"
+            },
+            "LoyaltyTier": {
+                "Source": "_source.LoyaltyTier",
+                "Target": "_hotelReservation.Loyalty.Tier"
+            },
+            "RatePlanCode": {
+                "Source": "_source.RatePlanCode",
+                "Target": "_hotelReservation.RatePlan.Code"
+            },
+            "RatePlanName": {
+                "Source": "_source.RatePlanName",
+                "Target": "_hotelReservation.RatePlan.Name"
+            },
+            "RatePlanDescription": {
+                "Source": "_source.RatePlanDescription",
+                "Target": "_hotelReservation.RatePlan.Description"
+            },
+            "CreationChannelId": {
+                "Source": "_source.CreationChannelId",
+                "Target": "_hotelReservation.Channel.CreationChannelId"
+            },
+            "BookingMethod": {
+                "Source": "_source.BookingMethod",
+                "Target": "_hotelReservation.Channel.Method"
+            },
+            "Refundable": {
+                "Source": "_source.Refundable",
+                "Target": "_hotelReservation.Refundable"
+            },
+            "CancellationCharge": {
+                "Source": "_source.CancellationCharge",
+                "Target": "_hotelReservation.CancellationCharge"
+            },
+            "CancellationReason": {
+                "Source": "_source.CancellationReason",
+                "Target": "_hotelReservation.Cancellation.Reason"
+            },
+            "CancellationComment": {
+                "Source": "_source.CancellationComment",
+                "Target": "_hotelReservation.Cancellation.Comment"
+            },
+            "AdditionalNote": {
+                "Source": "_source.AdditionalNote",
+                "Target": "_hotelReservation.AdditionalNote"
+            },
+            "PreferenceRef": {
+                "Source": "_source.PreferenceRef",
+                "Target": "_hotelReservation.PreferenceRef"
+            },
+            "SameDayRate": {
+                "Source": "_source.SameDayRate",
+                "Target": "_hotelReservation.SameDayRate"
+            },
+            "Reserver": {
+                "Source": "_source.Reserver",
+                "Target": "_hotelReservation.Reserver"
+            }
+        },
+   "Keys":{
+            "LoyaltyId": [
+                {
+                    "FieldNames": [
+                        "LoyaltyId"
+                    ],
+                    "StandardIdentifiers": [
+                        "PROFILE"
+                    ]
+                }
+            ],            
+            "ObjectId": [
+                {
+                    "FieldNames": [
+                        "ReservationId"
+                    ],
+                    "StandardIdentifiers": [
+                        "UNIQUE",
+                        "HOTEL_RESERVATION"
+                    ]
+                }
+            ],
+            "ConfirmationNumber": [
+                {
+                    "FieldNames": [
+                        "ConfirmationNumber"
+                    ]
+                }
+            ]
+        }
+}
