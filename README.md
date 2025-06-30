@@ -59,8 +59,13 @@ Once you have an ACCP domain, you can:
 
 5. Login into the ACCP application and navigate to **Profile Explorer** under the Customer Profiles menu option. Click on any of the profile listed within the Recent Profiles. A Profile view of the customer is launched with all the different objects populated based on the data generator script executed in the previous step.
 
-	
+### Airline specific view of Profile Explorer
+
 ![profile explorer](assets/profile_explorer.png)
+
+### Hotel specific view of Profile Explorer
+
+![hotel profile explorer](assets/hotel_profile_explorer.png)
 
 ## Security
 
