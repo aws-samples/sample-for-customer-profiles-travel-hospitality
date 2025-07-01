@@ -40,10 +40,14 @@ Once you have an ACCP domain, you can:
 	 a. In JupyterLab, select "Terminal" to open a new terminal window <br /> 
 	 b. In the terminal, execute the following command to clone the repository <br />
 	 ```
+	 cd SageMaker
 	 git clone https://github.com/aws-samples/sample-for-customer-profiles-travel-hospitality.git
 	 ```
 	 
-	![terminal](assets/terminal.png)
+	![terminal](assets/terminal.png)  
+	  
+	  
+	![terminal](assets/git_clone.png)
 			
 2. Once the cloning completes, navigate to the `initialize.py` file:<br />
 	a. Replace the ACCP domain <br />
