@@ -44,7 +44,10 @@ Once you have an ACCP domain, you can:
 	 git clone https://github.com/aws-samples/sample-for-customer-profiles-travel-hospitality.git
 	 ```
 	 
-	![terminal](assets/terminal.png)
+	![terminal](assets/terminal.png)  
+	  
+	  
+	![terminal](assets/git_clone_.png)
 			
 2. Once the cloning completes, navigate to the `initialize.py` file:<br />
 	a. Replace the ACCP domain <br />
