@@ -47,7 +47,7 @@ Once you have an ACCP domain, you can:
 	![terminal](assets/terminal.png)  
 	  
 	  
-	![terminal](assets/git_clone_.png)
+	![terminal](assets/git_clone.png)
 			
 2. Once the cloning completes, navigate to the `initialize.py` file:<br />
 	a. Replace the ACCP domain <br />
