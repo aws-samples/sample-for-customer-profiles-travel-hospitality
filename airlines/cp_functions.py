@@ -54,9 +54,9 @@ def createCalculatedAttribute(client,domainName,calcAttrName):
             'Statistic': json_data['Statistic'],
             'UseHistoricalData': json_data['UseHistoricalData']
         }
-        if hasattr(json_data, 'Conditions'):
+        if 'Conditions' in json_data:
             calc_attr_def['Conditions'] = json_data['Conditions']
-        if hasattr(json_data, 'Filter'):
+		if 'Filter' in json_data:
             calc_attr_def['Filter'] = json_data['Filter']
 
         print(calc_attr_def)
