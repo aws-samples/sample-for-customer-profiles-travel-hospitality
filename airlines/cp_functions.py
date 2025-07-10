@@ -56,7 +56,7 @@ def createCalculatedAttribute(client,domainName,calcAttrName):
         }
         if 'Conditions' in json_data:
             calc_attr_def['Conditions'] = json_data['Conditions']
-		if 'Filter' in json_data:
+        if 'Filter' in json_data:
             calc_attr_def['Filter'] = json_data['Filter']
 
         print(calc_attr_def)
